@@ -16,8 +16,7 @@ from telethon import TelegramClient
 from telethon.tl.functions.account import UpdateProfileRequest
 from emoji import emojize
 
-emojis = ["😀", "😄", "😊", "😎", "😍", "🤩", "😂", "🥳", "😇", "🥰"]
-random_emoji = random.choice(emojis)
+
 dizzy = emojize(":dizzy:")
 cake = emojize(":cake:")
 all_time_emoji_name = ["clock12", "clock1230", "clock1", "clock130", "clock2", "clock230", "clock3", "clock330", "clock4", "clock430", "clock5", "clock530", "clock6", "clock630", "clock7", "clock730", "clock8", "clock830", "clock9", "clock930", "clock10", "clock1030", "clock11", "clock1130"]
@@ -48,6 +47,8 @@ async def change_name_auto():
         try:
             time_cur = strftime("%H:%M:%S:%p:%a", time.localtime())
             hour, minu, seco, p, abbwn = time_cur.split(':')
+            emojis = ["😀", "😄", "😊", "😎", "😍", "🤩", "😂", "🥳", "😇", "🥰"]
+            random_emoji = random.choice(emojis)            
             if seco=='00' or seco=='30':
                 shift = 0
                 mult = 1
