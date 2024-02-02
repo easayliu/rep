@@ -52,27 +52,27 @@ Nodes:
           Path: # HTTP PATH, Empty for any
           Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      # EnableREALITY: false # 是否开启 REALITY
-      # DisableLocalREALITYConfig: false  # 是否忽略本地 REALITY 配置
-      # REALITYConfigs: # 本地 REALITY 配置
-      #   Show: false # Show REALITY debug
-      #   Dest: m.media-amazon.com:443 # REALITY 目标地址
-      #   ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      #   ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-      #     - m.media-amazon.com
-      #   PrivateKey: # 可不填
-      #   MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
-      #   MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
-      #   MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
-      #   ShortIds: # 可不填
-      #     - ""
-      # CertConfig:
-      #   CertMode: none # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-      #   CertDomain: "node1.test.com" # Domain to cert
-      #   CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
-      #   KeyFile: /etc/XrayR/cert/node1.test.com.key
-      #   Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
-      #   Email: test@me.com
-      #   DNSEnv: # DNS ENV option used by DNS provider
-      #     ALICLOUD_ACCESS_KEY: aaa
-      #     ALICLOUD_SECRET_KEY: bbb
+      EnableREALITY: false # 是否开启 REALITY
+      DisableLocalREALITYConfig: false  # 是否忽略本地 REALITY 配置
+      REALITYConfigs: # 本地 REALITY 配置
+        Show: false # Show REALITY debug
+        Dest: m.media-amazon.com:443 # REALITY 目标地址
+        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
+        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
+          - m.media-amazon.com
+        PrivateKey: # 可不填
+        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
+        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
+        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
+        ShortIds: # 可不填
+          - ""
+      CertConfig:
+        CertMode: none # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "node1.test.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/node1.test.com.key
+        Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
+        Email: test@me.com
+        DNSEnv: # DNS ENV option used by DNS provider
+          ALICLOUD_ACCESS_KEY: aaa
+          ALICLOUD_SECRET_KEY: bbb
