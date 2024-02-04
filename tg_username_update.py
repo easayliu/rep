@@ -47,7 +47,7 @@ async def change_name_auto():
         try:
             time_cur = strftime("%H:%M:%S:%p:%a", time.localtime())
             hour, minu, seco, p, abbwn = time_cur.split(':')
-            emojis = ["😀", "😄", "😊", "😎", "😍", "🤩", "🥳", "😇", "🥰"]
+            emojis = ["😀", "😄", "😊", "😎", "😍", "🤩", "🥳", "🥰"]
             random_emoji = random.choice(emojis)            
             if seco=='00' or seco=='30':
                 shift = 0
@@ -63,11 +63,11 @@ async def change_name_auto():
                 elif for_fun < 0.30:
                     last_name = 'Easay %s:%s %s %s %s' % (hour, minu, p, abbwn, random_emoji)
                 elif for_fun < 0.60:
-                    last_name = 'Easay %s:%s %s GMT %s' % (hour, minu, p, random_emoji)
+                    last_name = 'Easay %s:%s %s %s %s' % (hour, minu, p, abbwn, random_emoji)
                 elif for_fun < 0.90:
-                    last_name = 'Easay %s:%s %s GMT %s' % (hour, minu, p, random_emoji)
+                    last_name = 'Easay %s:%s %s %s %s' % (hour, minu, p, abbwn, random_emoji)
                 else:
-                    last_name = 'Easay %s:%s %s GMT %s' % (hour, minu, p, random_emoji)
+                    last_name = 'Easay %s:%s %s %s %s' % (hour, minu, p, abbwn, random_emoji)
         
                 await client1(UpdateProfileRequest(first_name=last_name))
                 logger.info('Updated -> %s' % last_name)
