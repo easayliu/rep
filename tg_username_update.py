@@ -47,7 +47,8 @@ async def change_name_auto():
         try:
             time_cur = strftime("%H:%M:%S:%p:%a", time.localtime())
             hour, minu, seco, p, abbwn = time_cur.split(':')
-            emojis = ["😀", "😄", "😊", "😎", "😍", "🤩", "🥳", "🥰"]
+            # emojis = ["😊", "😎", "😍", "🤩", "🥳", "🥰"]
+            emojis = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐨', '🐯', '🦁', '🐮', '🐷', '🐸']
             random_emoji = random.choice(emojis)            
             if seco=='00' or seco=='30':
                 shift = 0
